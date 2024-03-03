@@ -1,0 +1,88 @@
+<script>
+let total=0;
+function get(){
+var a=document.getElementById("n1");
+var b=document.getElementById("n2");
+a.style.display="none";
+b.style.display="block";
+}
+
+function right(){
+document.getElementById("e").style.backgroundColor = "green";
+total++;
+}
+
+function wrong(){
+document.getElementById("e").style.backgroundColor = "red";
+}
+
+function result(){
+alert("Total marks:"+total);
+}
+
+</script>
+
+<style>
+.a{
+text-align:center;
+margin-top:300px;
+border:solid 2px black;
+margin:250px 500px 200px 500px;
+padding: 50px 50px 50px 50px;
+}
+.b{
+border:solid 2px black;
+padding: 10px 10px 10px 10px;
+}
+.c{
+border:solid 2px black;
+padding: 10px 10px 10px 10px;
+}
+.d{
+border:solid 2px black;
+padding: 10px 10px 10px 10px;
+}
+#e{
+border:solid 2px black;
+padding: 10px 10px 10px 10px;
+}
+</style>
+
+<section id="n1">
+<div class="a">
+<placeholder>Name:  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</placeholder><input type="text"><br><br>
+<placeholder>Register Number: </placeholder><input type="text"><br><br><br>
+<input type="submit" onclick="get()">
+</div>
+</section>
+
+<section id="n2" style="display:none;">
+<div id="e" style="background-color:white">
+<div class="b" style="background-color:#F5F5F5">
+1.Which type is JavaScript?<br><br>
+<input type="submit" value="Object-Oriented" onclick="wrong()"><br><br>
+<input type="submit" value="Object-Based" onclick="right()"><br><br>
+<input type="submit" value="Assembly-language" onclick="wrong()"><br><br>
+<input type="submit" value="High-level" onclick="wrong()">
+</div><br>
+
+<div class="c" style="background-color:#F5F5F5">
+2.The "function" and " var" are known as:<br><br>
+<input type="submit" value="Keywords" onclick="wrong()"><br><br>
+<input type="submit" value="Declaration statement" onclick="right()"><br><br>
+<input type="submit" value="Data types" onclick="wrong()"><br><br>
+<input type="submit" value="Prototypes" onclick="wrong()">
+</div><br>
+
+<div class="d" style="background-color:#F5F5F5">
+3.In JavaScript the x===y statement implies that:<br><br>
+<input type="submit" value="Both x and y are equal in value, type and reference address as well." onclick="wrong()"><br><br>
+<input type="submit" value="Both are equal in the value and data type." onclick="right()"><br><br>
+<input type="submit" value="Both are x and y are equal in value only." onclick="wrong()"><br><br>
+<input type="submit" value="Both are not same at all." onclick="wrong()">
+</div><br><br>
+<center>
+<input type="submit" onclick="result()"><br><br>
+</center>
+</div>
+</section>
